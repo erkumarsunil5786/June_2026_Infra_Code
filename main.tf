@@ -2,6 +2,10 @@ resource "azurerm_resource_group" "rg" {
   name     = "satya-rg"
   location = "West Europe"
 }
+resource "azurerm_resource_group" "rg" {
+  name     = "satya-rg1"
+  location = "West Europe"
+}
 
 resource "azurerm_storage_account" "stg" {
     depends_on = [ azurerm_resource_group.rg ]
